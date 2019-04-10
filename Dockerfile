@@ -31,13 +31,13 @@ RUN apk --update add \
     openssl \
     py-cryptography \
     py-virtualenv \
+    python-dev \
     ca-certificates
 RUN apk --update add --virtual build-deps \
     build-base \
     git \
     libev-dev \
     openssl-dev \
-    python-dev \
     wget \
  && virtualenv /app/ve \
  && /app/ve/bin/pip install -U pip \
